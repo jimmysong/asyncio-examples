@@ -21,4 +21,4 @@ if __name__ == '__main__':
     t0 = time.time()
     print(json.dumps(website_statuses(websites)))
     t1 = time.time()
-    print("getting website statuses took {} seconds".format(t1-t0))
+    print("getting website statuses took {0:.1f} seconds".format(t1-t0))

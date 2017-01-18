@@ -28,4 +28,4 @@ if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     loop.run_until_complete(get_statuses(websites))
     t1 = time.time()
-    print("getting website statuses took {} seconds".format(t1-t0))
+    print("getting website statuses took {0:.1f} seconds".format(t1-t0))

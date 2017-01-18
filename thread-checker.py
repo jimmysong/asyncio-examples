@@ -34,4 +34,4 @@ if __name__ == '__main__':
         t.join()
     t1 = time.time()
     print(json.dumps(STATS))
-    print("getting website statuses took {} seconds".format(t1-t0))
+    print("getting website statuses took {0:.1f} seconds".format(t1-t0))
