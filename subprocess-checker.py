@@ -7,7 +7,7 @@ import time
 
 if __name__ == '__main__':
     with open(sys.argv[1], 'r') as f:
-        websites = f.readlines()
+        websites = f.read().splitlines()
     number_of_processes = int(sys.argv[2])
     per_process = math.ceil(len(websites) / number_of_processes)
     # split up the work based on number of processes

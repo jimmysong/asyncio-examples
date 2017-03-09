@@ -22,7 +22,7 @@ def get_website_status(url, lock):
 
 if __name__ == '__main__':
     with open(sys.argv[1], 'r') as f:
-        websites = f.readlines()
+        websites = f.read().splitlines()
     t0 = time.time()
     threads = []
     lock = threading.Lock()

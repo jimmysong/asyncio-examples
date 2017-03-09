@@ -24,7 +24,7 @@ async def get_website_status(url):
 
 if __name__ == '__main__':
     with open(sys.argv[1], 'r') as f:
-        websites = f.readlines()
+        websites = f.read().splitlines()
     t0 = time.time()
     loop = asyncio.get_event_loop()
     loop.run_until_complete(get_statuses(websites))
