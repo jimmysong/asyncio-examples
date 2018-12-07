@@ -9,7 +9,7 @@ def website_statuses(websites):
     for website in websites:
         response = requests.get(website)
         status = response.status_code
-        if not statuses.get(status):
+        if status not in statuses:
             statuses[status] = 0
         statuses[status] += 1
     return statuses

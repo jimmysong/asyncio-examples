@@ -10,7 +10,7 @@ async def get_statuses(websites):
         statuses = {}
         tasks = [get_website_status(website, session) for website in websites]
         for status in await asyncio.gather(*tasks):
-            if not statuses.get(status):
+            if status not in statuses:
                 statuses[status] = 0
             statuses[status] += 1
         print(json.dumps(statuses))
